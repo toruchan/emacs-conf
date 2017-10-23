@@ -89,3 +89,7 @@
 ;; Macのoptionをメタキーにする
 (setq mac-option-modifier 'meta)
 
+;; slim
+(unless (package-installed-p 'slim-mode)
+  (package-refresh-contents) (package-install 'slim-mode))
+(add-to-list 'auto-mode-alist '("\\.slim?\\'" . slim-mode))
